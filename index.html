@@ -1,259 +1,98 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HMCS Frédérick Rolette — Quit Tobacco Resources</title>
-  <meta name="description" content="Quick access to evidence-based smoking cessation tools and local supports for HMCS Frédérick Rolette crew.">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icons/icon-192.png">
-  <meta name="theme-color" content="#0b3d91">
-  <style>
-    :root{
-      --bg: #0b0e12;
-      --card:#121721;
-      --text:#e6ecf2;
-      --muted:#a9b7c6;
-      --accent:#4da3ff;
-      --accent-2:#4dffa3;
-      --border:#243042;
-      --warn:#ffd166;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
-    a{color:var(--accent);text-decoration:none}
-    a:focus,button:focus{outline:2px solid var(--accent-2);outline-offset:2px}
-    header{
-      border-bottom:1px solid var(--border);
-      background:linear-gradient(180deg,#0b3d91 0%, #0b0e12 70%);
-      padding:24px 16px 32px;
-      text-align:center;
-    }
-    .brand{
-      display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap
-    }
-    .crest{
-      width:56px;height:56px;border-radius:8px;background:#fff;color:#0b3d91;
-      display:grid;place-items:center;font-weight:700
-    }
-    h1{margin:4px 0 8px;font-size:clamp(20px,3.2vw,28px)}
-    .sub{color:var(--muted);margin:0 auto;max-width:800px}
-    .wrap{max-width:1000px;margin:0 auto;padding:16px}
-    .grid{
-      display:grid;gap:14px;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      margin:20px 0 28px;
-    }
-    .tile{
-      background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;
-      display:flex;flex-direction:column;gap:8px;min-height:140px
-    }
-    .tile h3{margin:0 0 4px;font-size:18px}
-    .tile p{margin:0;color:var(--muted)}
-    .tile .actions{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
-    .btn{
-      display:inline-block;border:1px solid var(--border);background:#1a2332;color:var(--text);
-      padding:10px 12px;border-radius:10px;font-weight:600
-    }
-    .btn.primary{background:#13335d;border-color:#2a4f7a}
-    .list{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:8px}
-    .list a.item{
-      display:flex;justify-content:space-between;gap:10px;align-items:center;
-      padding:12px;border-radius:10px;color:var(--text);border:1px solid transparent
-    }
-    .list a.item:hover{background:#1a2332;border-color:var(--border)}
-    .badge{font-size:12px;color:#000;background:var(--warn);padding:2px 8px;border-radius:999px}
-    footer{color:var(--muted);font-size:13px;border-top:1px solid var(--border);padding:20px 16px;text-align:center}
-    .notice{margin:8px 0 0}
-    .notice strong{color:#fff}
-    .inline-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HMCS Frédérick Rolette – Quit Smoking & Vaping Resources</title>
+<meta name="description" content="Quick access to quit smoking and vaping resources for HMCS Frédérick Rolette crew.">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b3d91">
+<style>
+:root {
+ --bg: #0b0e12;
+ --card: #121721;
+ --text: #e6ecf2;
+ --muted: #a9b7c6;
+ --accent: #4da3ff;
+ --border: #243042;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+header { background: #0b3d91; padding: 20px; text-align: center; }
+header h1 { margin: 0; font-size: 1.4rem; }
+section { padding: 16px; }
+h2 { font-size: 1.1rem; margin-bottom: 4px; }
+p.blurb { color: var(--muted); font-size: 0.9rem; margin-top: 0; }
+a.button {
+ display: block;
+ background: var(--card);
+ color: var(--text);
+ padding: 12px;
+ margin: 8px 0;
+ border-radius: 8px;
+ text-decoration: none;
+ border: 1px solid var(--border);
+}
+a.button:hover { background: #1a2332; }
+footer {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 16px;
+ font-size: 0.8rem;
+ color: var(--muted);
+ border-top: 1px solid var(--border);
+}
+footer a { color: var(--accent); text-decoration: none; }
+</style>
 </head>
 <body>
-  <header>
-    <div class="brand" role="img" aria-label="HMCS Frédérick Rolette crest and title">
-      <div class="crest" aria-hidden="true">FRR</div>
-      <div>
-        <h1>HMCS <em>Frédérick Rolette</em> — Quit Tobacco Resources</h1>
-        <p class="sub">Fast, evidence-based tools and local supports. Anonymous by default. Built for ship’s company.</p>
-      </div>
-    </div>
-    <div class="inline-links">
-      <button id="installBtn" class="btn">Install (Add to Home Screen)</button>
-      <a class="btn" href="#supports">Jump to Supports</a>
-      <a class="btn" href="#privacy">Privacy</a>
-    </div>
-  </header>
+<header>
+<h1>HMCS Frédérick Rolette – Quit Smoking &amp; Vaping Resources</h1>
+</header>
 
-  <main class="wrap">
-    <section class="grid" aria-label="Quick Actions">
-      <div class="tile">
-        <h3>Craving right now?</h3>
-        <p>Try a guided 60‑second breathing + urge surfing routine.</p>
-        <div class="actions">
-          <button class="btn primary" onclick="startCravingTimer()">Start 60‑second guide</button>
-          <a class="btn" href="#tips">Quick tips</a>
-        </div>
-      </div>
-      <div class="tile">
-        <h3>NRT quick guide</h3>
-        <p>Patches, gum, lozenges — how to use and dose, with links to CAF/provincial guidance.</p>
-        <div class="actions">
-          <a class="btn primary" href="#" onclick="openGroup('nrt')">Open</a>
-        </div>
-      </div>
-      <div class="tile">
-        <h3>Quit plan (1‑page)</h3>
-        <p>Pick a quit date, identify triggers, choose substitutes. Download/print if you want.</p>
-        <div class="actions">
-          <a class="btn primary" href="#" onclick="openGroup('plan')">Open</a>
-        </div>
-      </div>
-      <div class="tile">
-        <h3>Shipboard info</h3>
-        <p>Who to contact at sea and alongside. Tap‑to‑call for urgent support.</p>
-        <div class="actions">
-          <a class="btn primary" href="#" onclick="openGroup('ship')">Open</a>
-        </div>
-      </div>
-    </section>
+<section>
+<h2>Nova Scotia Health – Quit Smoking &amp; Vaping Program</h2>
+<p class="blurb">Free program to help you quit smoking or vaping, online or in person.</p>
+<a class="button" href="https://library.nshealth.ca/HealthyLiving/StopTobaccoUse" target="_blank">Visit Program Website</a>
+</section>
 
-    <section id="supports" aria-label="Supports">
-      <h2 class="sr-only">Supports</h2>
-      <div class="list" id="supportsList">
-        <!-- dynamically populated -->
-      </div>
-    </section>
+<section>
+<h2>Quitlines &amp; Digital Support</h2>
+<p class="blurb">Talk, text, or chat with a trained quit coach — free and confidential.</p>
+<a class="button" href="tel:811">Call Quitline (NS)</a>
+<a class="button" href="sms:19027007700?body=SMOKEFREE">Text "SMOKEFREE"</a>
+<a class="button" href="https://smokefreens.ca/resources/tobacco-cessation/" target="_blank">Smoke‑Free NS (chat/resources)</a>
+<a class="button" href="https://tobaccofree.novascotia.ca" target="_blank">Tobacco Free NS (website)</a>
+</section>
 
-    <section id="tips" aria-label="Quick Tips" style="margin-top:22px">
-      <div class="list" id="tipsList">
-        <!-- dynamically populated -->
-      </div>
-    </section>
+<section>
+<h2>Community Pharmacy Support (Nova Scotia)</h2>
+<p class="blurb">Pharmacists across Nova Scotia can help with quitting. Some services may be for MSI (NS Health Card) holders — ask about eligibility when you call.</p>
+<a class="button" href="https://pans.ns.ca/quit-or-reduce-smoking-nicotine-products" target="_blank">Find pharmacy services (PANS)</a>
+<a class="button" href="tel:9024229583">Call PANS</a>
+</section>
 
-    <section id="privacy" style="margin-top:22px">
-      <div class="list">
-        <a class="item" href="#privacy" aria-current="page">
-          <span><strong>Privacy</strong> — Anonymous by default</span>
-          <span class="badge">No PHI</span>
-        </a>
-        <div style="padding:0 12px 12px;color:var(--muted)">
-          This site does not collect personal health information. We use no cookies and store nothing on a server.
-          If analytics are enabled, they are aggregate only. If you choose to contact medical staff, that action
-          happens via your own phone or email client.
-        </div>
-      </div>
-    </section>
-  </main>
+<section>
+<h2>Canada‑Wide Support</h2>
+<p class="blurb">National resources open to anyone in Canada — free, confidential, and accessible to CAF members.</p>
+<a class="button" href="tel:18663663667">Call Canada’s National Quitline</a>
+<a class="button" href="https://www.smokershelpline.ca" target="_blank">Visit Smokers’ Helpline</a>
+<a class="button" href="https://www.quitmap.ca" target="_blank">Find Local/National Supports (QuitMap)</a>
+<a class="button" href="tel:18889393333">Call the Canadian Cancer Society</a>
+<a class="button" href="mailto:info@cis.cancer.ca">Email the Canadian Cancer Society</a>
+</section>
 
-  <footer>
-    <div>© <span id="year"></span> HMCS <em>Frédérick Rolette</em>. Built for internal crew use.</div>
-    <div class="notice">For medical concerns at sea, contact <strong>Sick Bay</strong>. For emergencies alongside, call <strong>911</strong> then ship’s duty staff.</div>
-  </footer>
+<section>
+<h2>Tools &amp; Calculators</h2>
+<p class="blurb">Quick interactive tools to motivate your quit journey.</p>
+<a class="button" href="https://cancer.ca/quitcalculator" target="_blank">Quit Cost Calculator</a>
+</section>
 
-  <script>
-  /* ======== CONFIG: edit these lists only ======== */
-  const LINKS = {
-    supports: [
-      { label: "Health Promotion Services — CFB Halifax (email)", url: "mailto:HFXHealthPromotion@forces.gc.ca" },
-      { label: "Smokers’ Helpline (phone)", url: "tel:18775134933" },
-      { label: "Smokers’ Helpline (text)", url: "sms:12345" },
-      { label: "Nova Scotia Quit Smoking (web)", url: "https://novascotia.ca/dhw/healthy-living/quit-smoking.asp" },
-      { label: "Government of Canada — Quitting smoking", url: "https://www.canada.ca/en/health-canada/services/smoking-tobacco/quit-smoking.html" }
-    ],
-    nrt: [
-      { label: "NRT overview (Health Canada)", url: "https://www.canada.ca/en/health-canada/services/smoking-tobacco/quit-smoking/nicotine-replacement-therapy.html" },
-      { label: "Patch dosing guide (PDF)", url: "#" },
-      { label: "Gum/Lozenge tips", url: "#" }
-    ],
-    plan: [
-      { label: "1‑page quit plan template (PDF)", url: "#" },
-      { label: "Identify triggers & substitutes (article)", url: "#" }
-    ],
-    ship: [
-      { label: "Sick Bay — tap to call (when available)", url: "tel:0000000000" },
-      { label: "Duty Staff — tap to call", url: "tel:0000000000" },
-      { label: "Medical parade times & location (internal)", url: "#" }
-    ],
-    tips: [
-      "Delay: wait 60–120 seconds; the urge peaks then fades.",
-      "Deep breathing: 4‑second inhale, 4‑second hold, 6‑second exhale × 5.",
-      "Drink water; chew sugar‑free gum or mints.",
-      "Change the cue: move, walk, or splash cold water.",
-      "Use NRT correctly; pair long‑acting patch with short‑acting gum/lozenge."
-    ]
-  };
-  /* ======== end config ======== */
+<footer>
+<div>No personal health information collected.</div>
+<div><a href="mailto:HFXHealthPromotion@forces.gc.ca">Contact Health Promotion (Halifax)</a></div>
+</footer>
 
-  const supportsList = document.getElementById('supportsList');
-  const tipsList = document.getElementById('tipsList');
-  const yearSpan = document.getElementById('year');
-  yearSpan.textContent = new Date().getFullYear();
-
-  // Render supports
-  LINKS.supports.forEach(s => {
-    const a = document.createElement('a');
-    a.className = 'item';
-    a.href = s.url; a.target = (s.url.startsWith('http')?'_blank':'_self');
-    a.rel = (s.url.startsWith('http')?'noopener noreferrer':'');
-    a.innerHTML = `<span>${s.label}</span><span>›</span>`;
-    supportsList.appendChild(a);
-  });
-
-  // Render quick tips
-  LINKS.tips.forEach(t => {
-    const div = document.createElement('a');
-    div.className = 'item';
-    div.href = '#tips';
-    div.innerHTML = `<span>${t}</span>`;
-    tipsList.appendChild(div);
-  });
-
-  // Open group modal (simple in-page list)
-  function openGroup(group){
-    const items = LINKS[group] || [];
-    if(!items.length){ alert('No items yet.'); return; }
-    const msg = items.map(i => `${i.label} — ${i.url}`).join('\n\n');
-    alert(msg); // keep MVP simple; can be upgraded to a modal later.
-  }
-
-  // Craving timer: simple 60-second guide
-  function startCravingTimer(){
-    const steps = [
-      "Breathe in 4s… hold 4s… out 6s.",
-      "Notice the urge without acting on it.",
-      "Sip water. Relax your shoulders.",
-      "Remind yourself: urges pass."
-    ];
-    let t = 60; let i = 0;
-    const iv = setInterval(()=>{
-      if(t % 15 === 0 && i < steps.length){ console.log(steps[i++]); }
-      document.title = `Craving guide — ${t}s`;
-      if(--t <= 0){ clearInterval(iv); document.title = 'HMCS Frédérick Rolette — Quit Tobacco Resources'; alert('Nice work. Urge peaked and passed.'); }
-    },1000);
-    alert('Starting 60‑second guide. Keep breathing: 4‑4‑6.');
-  }
-
-  // PWA install prompt
-  let deferredPrompt;
-  const installBtn = document.getElementById('installBtn');
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    installBtn.style.display = 'inline-block';
-  });
-  installBtn.addEventListener('click', async () => {
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-    await deferredPrompt.userChoice;
-    deferredPrompt = null;
-  });
-
-  // Register service worker for offline (optional)
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js').catch(()=>{});
-  }
-  </script>
 </body>
 </html>
